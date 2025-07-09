@@ -1,0 +1,74 @@
+ELF Object File
+=================
+
+ELF Header:
+  Magic:   7F 45 4C 46 (ELF)
+  Class:   ELF32
+  Data:    2's complement, little endian
+  Version: 1 (current)
+  OS/ABI:  System V ABI
+  Type:    REL (Relocatable file)
+  Machine: MSP430
+  Entry:   0x0000
+
+Section Headers:
+  [Nr] Name       Type            Addr   Size
+  [ 0]            NULL            000000 000000
+  [ 1] .text      PROGBITS        000000 000016
+  [ 2] .data      PROGBITS        020000 00000C
+  [ 3] .symtab    SYMTAB          000000 000060
+  [ 4] .shstrtab  STRTAB          000000 000100
+  [ 5] .rel.text  REL             000000 000008
+
+.text Section (Machine Code):
+Address | Code
+---------------
+0000    | D0F2
+0002    | 0001
+0004    | 0000
+0006    | E0F2
+0008    | 0001
+000A    | 0000
+000C    | 40B0
+000E    | FFFF
+0010    | 0000
+0012    | 23F6
+0014    | 3FF5
+
+.data Section (Literals):
+Address | Value   | Type
+-----------------------
+0002    | 0001 | src
+0004    | 0000 | dst
+0008    | 0001 | src
+000A    | 0000 | dst
+000E    | FFFF | src
+0010    | 0000 | dst
+
+.symtab Section (Symbol Table):
+Symbol    | Value | Type      | Section | Defined | Global
+-------------------------------------------------------
+RESET      | 0000 | code      | text    | True    | False
+PADIR      | 0000 | code      | text    | True    | False
+PAOUT      | 0000 | code      | text    | True    | False
+inner      | 0000 | code      | text    | True    | False
+outer      | 0000 | code      | text    | True    | False
+__STACK_END | 0000 | external  | none    | False   | True
+
+.relocation Section:
+Offset | Symbol | Type | Section
+---------------------------------------------
+0010 | r5         | ABSOLUTE_16  | text
+
+.rel.text Section (Relocation Entries):
+Offset  | Symbol     | Type        | Section
+-------------------------------------------
+0010    | r5         | ABSOLUTE_16 | text
+
+Section Information:
+Section | Start  | Size
+-------------------
+text    | 0000 | 0016
+data    | 0200 | 0000
+bss     | 0400 | 0000
+

@@ -1,0 +1,44 @@
+MSP430 Linked Executable
+========================
+
+.text Section (Machine Code):
+Address | Code
+--------+------
+0000    | 4034
+0002    | 1234
+0004    | 4482
+0006    | 0200
+0008    | 9214
+000A    | 0200
+000C    | 1280
+000E    | 0010
+0010    | 4500
+0012    | 4405
+0014    | 5405
+
+.data Section (Literals):
+Address | Value
+--------+-------
+0202    | 1234
+0206    | 0200
+020A    | 0200
+
+.symtab Section (Symbol Table):
+Symbol      | Value | Type      | Section | Defined | Global | File
+------------+-------+-----------+---------+---------+--------+----------
+EQUAL       | 0012  | relative  | text    | True    | False  | main.elf
+FUNC_MUL    | 0010  | relative  | text    | True    | False  | utils.elf
+main        | 0000  | relative  | text    | True    | False  | main.elf
+
+.relocations (Processed):
+Offset | Symbol      | Type        | Section | Status   | File
+-------+-------------+-------------+---------+----------+----------
+000E   | FUNC_MUL    | ABSOLUTE_16 | text    | RESOLVED | main.elf
+000E   | FUNC_MUL    | ABSOLUTE_16 | text    | RESOLVED | main.elf
+
+--- Linking Summary ---
+Total text instructions: 11
+Total data entries: 3
+Total symbols: 3
+Total relocations: 2
+Files linked: main.elf, utils.elf
