@@ -1,13 +1,13 @@
-# MSP430 Assembler, Linker & Loader 🔧💻
+# MSP430 Assembler, Linker & Loader
 
 Bu proje, MSP430 mimarisi için geliştirilmiş bir **assembler**, **linker** ve **loader** sisteminden oluşmaktadır. Python diliyle yazılmış olan bu sistem, assembly dilindeki kodları makine koduna çevirir, çoklu ELF dosyalarını birleştirerek tek bir çalıştırılabilir dosya oluşturur ve sanal bellek üzerinde programın yerleşimini simüle eder.
 
 ---
 
-## 🧩 Proje Yapısı
+## Proje Yapısı
 
 ```
-📁 Proje Klasörü
+ Proje Klasörü
 ├── generate_test_elfs/        # Test için otomatik .elf dosyası üreticisi
 ├── linked_output.elf          # Linker çıktısı (birleştirilmiş ELF dosyası)
 ├── linker.py                  # Linker modülü (ELF birleştirme)
@@ -26,33 +26,33 @@ Bu proje, MSP430 mimarisi için geliştirilmiş bir **assembler**, **linker** ve
 
 ---
 
-## 🎯 Proje Bileşenleri
+## Proje Bileşenleri
 
-### ✅ Assembler (Python + Tkinter GUI)
+### Assembler (Python + Tkinter GUI)
 - MSP430 assembly kodlarını iki geçişli derleyiciyle makine koduna çevirir.
 - `main.asm` gibi dosyaları işleyerek `.elf` formatında nesne dosyaları üretir.
 - GUI üzerinden kod yazma, sembol tablosu ve makine kodlarını görme imkanı sunar.
 
-### ✅ Linker (`linker.py`)
+### Linker (`linker.py`)
 - Birden fazla `.elf` dosyasını (örneğin `main.elf` ve `utils.elf`) alır.
 - Sembolleri çözümler, relocation işlemlerini yapar.
 - Sonuç olarak `linked_output.elf` dosyasını üretir.
 
-### ✅ Loader (`loader.py`)
+### Loader (`loader.py`)
 - Sanal bellek modeli (Flash, RAM, SFR, vs.) üzerinde ELF dosyasını belleğe yerleştirir.
 - Relocation ve segment yerleşimi işlemlerini gerçekleştirir.
 - Gerçek çalıştırma adreslerini belirleyerek programı simüle eder.
 
 ---
 
-## 🖼 Görseller
+## Görseller
 
 ### Bellek Haritası
 ![Memory Map](memory_map.png)
 
 ---
 
-## 📚 Raporlar
+## Raporlar
 
 - **Rapor_1.pdf** – Assembler tasarımı, opcode ve adresleme modları
 - **Rapor_2.pdf** – Derleyici detayları, GUI yapısı, assembly direktifleri
@@ -60,7 +60,7 @@ Bu proje, MSP430 mimarisi için geliştirilmiş bir **assembler**, **linker** ve
 
 ---
 
-## 🔧 Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 - Python 3.x
 - Tkinter (GUI)
@@ -71,7 +71,7 @@ Bu proje, MSP430 mimarisi için geliştirilmiş bir **assembler**, **linker** ve
 
 ---
 
-## 🚀 Başlatma Talimatı
+## Başlatma Talimatı
 
 1. Python 3 yüklü olduğundan emin olun.
 2. GUI'yi başlatmak için:
@@ -89,16 +89,16 @@ Bu proje, MSP430 mimarisi için geliştirilmiş bir **assembler**, **linker** ve
 
 ---
 
-## 👥 Geliştirici Ekibi
+## Geliştirici Ekibi
 
-- Adem COŞKUN – B200109003  
-- Emine KAYIT – B210109372  
-- Sedanur PEKER – 22010903060  
-- Zeliha POLAT – 22010903069  
+- Adem COŞKUN   
+- Emine KAYIT
+- Sedanur PEKER 
+- Zeliha POLAT
 
 ---
 
-## 📌 Notlar
+## Notlar
 
 - Proje eğitim amacıyla geliştirilmiştir.
 - Gerçek MSP430 donanımı yerine sanal bellek ortamında çalışmaktadır.
